@@ -11,6 +11,8 @@ function add(a, b) {
 
 
 // BLOCK: put there your code: Oleg
-
+function mul (a,b) {
+  return a*b;
+}
 
 // END
