@@ -28,6 +28,11 @@ test(`maxInArray(1, 2, 3)`, () => {
   expect(maxInArray(1, 2, 3)).toBe(null);
 });
 
+test(`maxInArray("1001", 2, 3)`, () => {
+  expect(maxInArray("1001", 2, 3)).toBe(null);
+});
+
+
 test(`maxInArray([1, "2", 3])`, () => {
   expect(maxInArray([1, "2", 3])).toBe(null);
 });
