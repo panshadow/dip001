@@ -1,4 +1,12 @@
-const {isArrayOf, takeOf, filterMultiplesOf} = require('./task002');
+const {filter, isArrayOf, takeOf, filterMultiplesOf} = require('./task002');
+
+test(`filter([1,2,3], (x) => x===2)`, () => {
+  expect(filter([1,2,3], (x) => x===2)).toEqual([2]);
+});
+
+test(`filter([1,2,3], (x) => x!=2)`, () => {
+  expect(filter([1,2,3], (x) => x!=2)).toEqual([1,3]);
+});
 
 
 test(`isArrayOf([1,2,3,"4"],"number")`, () => {
