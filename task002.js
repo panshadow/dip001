@@ -39,4 +39,4 @@ const filterMultiplesOf = (xs, x) => {
 
 }
 
-module.exports = {fitisArrayOf, takeOf, filterMultiplesOf}
+module.exports = {filter, isArrayOf, takeOf, filterMultiplesOf}
