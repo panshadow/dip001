@@ -1,4 +1,14 @@
 /**
+ * Filter xs by using `predicate` and return new array
+ * which contains only elements for which pred(el) == true
+ * @param {Array} xs
+ * @param {Function} pred
+ */
+const filter = (xs, pred) => {
+
+}
+
+/**
  * Test if `xs` is array of elements each of them is type of `type`
  * @arg {array} xs
  * @arg {string} type
@@ -29,4 +39,4 @@ const filterMultiplesOf = (xs, x) => {
 
 }
 
-module.exports = {isArrayOf, filterMultiplesOf}
+module.exports = {fitisArrayOf, takeOf, filterMultiplesOf}
