@@ -4,8 +4,14 @@
  * @param {Array} xs
  * @param {Function} pred
  */
-const filter = (xs, pred) => {
-
+function filter(xs, pred) {
+  let result = [];
+  for(let i=0;i<xs.length;i++) {
+    if (pred(xs[i])) {
+      result.push(xs[i]);
+    }
+  }
+  return result;
 }
 
 /**
