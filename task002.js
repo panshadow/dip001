@@ -21,11 +21,13 @@ function filter(xs, pred) {
  * @return {boolean}
  */
 const isArrayOf = (xs, type) => {
-  let i = 0;
-      if (typeof type[i] != i.pred) {
-        return false;
-    }
+  for(let i=0;i<xs.length;i++) {
+      if (typeof xs[i] != type) {
+      return false;
+      }
   }
+  return true;
+}
 
 
 /**
@@ -35,7 +37,7 @@ const isArrayOf = (xs, type) => {
  * @return {array}
  */
 const takeOf = (xs, type) => {
-
+  
 }
 
 /**
