@@ -30,6 +30,9 @@ const isArrayOf = (xs, type) => {
 }
 
 
+function hasType(y, type) {
+  return (typeof y === type);
+}
 /**
  * Filter array `xs` and return only elements which has type `type`
  * @arg {array} xs
@@ -37,7 +40,7 @@ const isArrayOf = (xs, type) => {
  * @return {array}
  */
 const takeOf = (xs, type) => {
-  
+  return filter(xs, (y) => hasType(y, type))
 }
 
 /**
@@ -47,7 +50,7 @@ const takeOf = (xs, type) => {
  * @return {array}
  */
 const filterMultiplesOf = (xs, x) => {
-
+  
 }
 
 module.exports = {filter, isArrayOf, takeOf, filterMultiplesOf}
