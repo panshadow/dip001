@@ -21,8 +21,11 @@ function filter(xs, pred) {
  * @return {boolean}
  */
 const isArrayOf = (xs, type) => {
-
-}
+  let i = 0;
+      if (typeof type[i] != i.pred) {
+        return false;
+    }
+  }
 
 
 /**
