@@ -21,12 +21,15 @@ function filter(xs, pred) {
  * @return {boolean}
  */
 const isArrayOf = (xs, type) => {
-  for(let i=0;i<xs.length;i++) {
+  if(Array.isArray(xs)){
+    for(let i=0;i<xs.length;i++) {
       if (typeof xs[i] != type) {
-      return false;
+        return false;
       }
+    }
+    return true;
   }
-  return true;
+  return false
 }
 
 
@@ -43,14 +46,24 @@ const takeOf = (xs, type) => {
   return filter(xs, (y) => hasType(y, type))
 }
 
+function isntMultiplesOf(x){
+  function f(y){
+    return y % x
+  }
+  return f
+}
 /**
  * Filter array of numbers `xs` and return array without numbers which multiples `x`
- * @arg {array} xs
+ * @agr {array} xs
  * @arg {number} x
  * @return {array}
  */
 const filterMultiplesOf = (xs, x) => {
-  
+  let result = null
+  if(isArrayOf(xs, "number") && typeof x === "number"){
+    result = xs.filter(isntMultiplesOf(x))
+  }
+  return result
 }
 
 module.exports = {filter, isArrayOf, takeOf, filterMultiplesOf}
